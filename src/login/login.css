@@ -1,0 +1,30 @@
+.Login{
+    background-color:aqua;
+    width: 60%;
+    height: 70vh;
+    transform: translate(30%,15vh);
+    overflow: hidden;
+    border: 10px solid aqua;
+}
+.login_form{
+    width: 80%;
+    background-color:white;
+    float: right;
+    height:100%;
+    
+}
+.row1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.forgot_pass{
+    
+    align-self: flex-end;
+    padding-right: 10%;
+}
+.login_btn{
+    background-color: aqua !important;
+    border: 1px aqua !important;
+}
