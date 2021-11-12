@@ -32,7 +32,7 @@ function Login() {
             {console.log(values.showEmail)}
             <div className="login_form">
                 <div className="row1">
-                    <h1 className="heading my-5 fw-bold">Log in</h1>
+                    <h3 className="heading my-5 fw-bold">Log in</h3>
                     <FormControl sx={{ my: 1, width: '80%' }} variant="standard">
                         <InputLabel htmlFor="standard-adornment-email">Email</InputLabel>
                         <Input
