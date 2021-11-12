@@ -1,14 +1,25 @@
 import React,{useState} from 'react'
 import "./account.css"
-import { FormControl, IconButton, Input, InputAdornment, InputLabel, } from '@mui/material';
-import { Visibility, VisibilityOff } from '@mui/icons-material';
+import { FormControl,TextField, IconButton, Input, InputAdornment, InputLabel, } from '@mui/material';
+import { Plumbing, Visibility, VisibilityOff } from '@mui/icons-material';
+import Box from '@mui/material/Box';
+import FilledInput from '@mui/material/FilledInput';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import FormHelperText from '@mui/material/FormHelperText';
+
 function CreateAcount() {
+    const shops = ["AC", "Plumbing", "Electric", "Fire Fighting", "Support", "Medical"];
     const [values, setValues] = useState({
+        firstName: '',
+        lastName: '',
         email: '',
+        phone: '',
+        companyName: '',
+        selectedShop:'',
         password: '',
-        weight: '',
-        weightRange: '',
+        confirmPassword: '',
         showPassword: false,
+        description:'',
     });
 
     const handleChange = (prop) => (event) => {
@@ -32,38 +43,68 @@ function CreateAcount() {
             {console.log(values.showEmail)}
             <div className="login_form">
                 <div className="row1">
-                    <h3 className="heading my-5 fw-bold">Log in</h3>
-                    <FormControl sx={{ my: 1, width: '80%' }} variant="standard">
-                        <InputLabel htmlFor="standard-adornment-email">Email</InputLabel>
-                        <Input
-                            id="standard-adornment-email"
-                            type='email'
-                            value={values.email}
-                            onChange={handleChange('email')}
-                        />
-                    </FormControl>
-                    <FormControl sx={{ my: 1, width: '80%' }} variant="standard">
-                        <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
-                        <Input
-                            id="standard-adornment-password"
-                            type={values.showPassword ? 'text' : 'password'}
-                            value={values.password}
-                            onChange={handleChange('password')}
-                            endAdornment={
-                                <InputAdornment position="end">
-                                    <IconButton
-                                        aria-label="toggle password visibility"
-                                        onClick={handleClickShowPassword}
-                                        onMouseDown={handleMouseDownPassword}
-                                    >
-                                        {values.showPassword ? <VisibilityOff /> : <Visibility />}
-                                    </IconButton>
-                                </InputAdornment>
-                            }
-                        />
-                    </FormControl>
-                    <span className="forgot_pass btn">Forgot Password</span>
-                    <button type="button" class="btn btn-primary login_btn fw-bold w-25 my-4">LOGIN</button>
+                    <h3 className="heading my-5 fw-bold">Create Account</h3>
+                        <div className="subRow">
+                        <FormControl sx={{ m: 1, width: '25ch' }} variant="standard">
+                            <InputLabel htmlFor="standard-adornment-fname">First Name</InputLabel>
+                            <Input
+                                id="standard-adornment-fname"
+                                type='text'
+                                value={values.firstName}
+                                onChange={handleChange('firstName')}
+                            />
+                            </FormControl>
+                            <FormControl sx={{ m: 1, width: '25ch' }} variant="standard">
+                                <InputLabel htmlFor="standard-adornment-lastName">Last Name</InputLabel>
+                                <Input
+                                    id="standard-adornment-lastName"
+                                    type='lastName'
+                                    value={values.lastName}
+                                    onChange={handleChange('email')}
+                                />
+                            </FormControl>
+                        </div>
+                    <div className="subRow">
+                        <FormControl sx={{ m: 1, width: '25ch' }} variant="standard">
+                            <InputLabel htmlFor="standard-adornment-email">Email</InputLabel>
+                            <Input
+                                id="standard-adornment-email"
+                                type='email'
+                                value={values.email}
+                                onChange={handleChange('email')}
+                            />
+                        </FormControl>
+                        <FormControl sx={{ m: 1, width: '25ch' }} variant="standard">
+                            <InputLabel htmlFor="standard-adornment-phone">Phone</InputLabel>
+                            <Input
+                                id="standard-adornment-phone"
+                                type='phone'
+                                value={values.phone}
+                                onChange={handleChange('phone')}
+                            />
+                        </FormControl>
+                    </div>
+                    <div className="subRow">
+                        <FormControl sx={{ m: 1, width: '25ch' }} variant="standard">
+                            <InputLabel htmlFor="standard-adornment-email">Email</InputLabel>
+                            <Input
+                                id="standard-adornment-email"
+                                type='email'
+                                value={values.email}
+                                onChange={handleChange('email')}
+                            />
+                        </FormControl>
+                        <FormControl sx={{ m: 1, width: '25ch' }} variant="standard">
+                            <InputLabel htmlFor="standard-adornment-phone">Phone</InputLabel>
+                            <Input
+                                id="standard-adornment-phone"
+                                type='phone'
+                                value={values.phone}
+                                onChange={handleChange('phone')}
+                            />
+                        </FormControl>
+                    </div>
+                    <button type="button" class="btn btn-primary login_btn fw-bold w-25 my-4">Create Account</button>
 
                 </div>
 
