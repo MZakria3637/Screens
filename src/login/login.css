@@ -1,7 +1,7 @@
 .Login{
     background-color:aqua;
     width: 60%;
-    height: 70vh;
+    height: auto;
     transform: translate(30%,15vh);
     overflow: hidden;
     border: 10px solid aqua;
