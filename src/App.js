@@ -1,5 +1,5 @@
-//import Forgot from "./forgot_password/forgot_password";
-// import Login from "./login/login";
+import Forgot from "./forgot_password/forgot_password";
+ import Login from "./login/login";
 
 import ChangePassword from "./change_password/change_password";
 
@@ -8,7 +8,7 @@ import ChangePassword from "./change_password/change_password";
 function App() {
   return (
     <div>
-      <ChangePassword />
+      <Login />
     </div>
   );
 }

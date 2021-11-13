@@ -1,10 +1,10 @@
 .Login{
-    background-color:aqua;
+    background-color:#15b8bf;
     width: 60%;
     height: 70vh;
     transform: translate(30%,15vh);
     overflow: hidden;
-    border: 10px solid aqua;
+    border: 10px solid #15b8bf;
 }
 .login_form{
     width: 80%;
@@ -18,6 +18,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    margin: 5%;
 }
 .instruction{
     opacity: 0.6;
@@ -25,6 +26,7 @@
     padding-left: 10%;
 }
 .login_btn{
-    background-color: aqua !important;
-    border: 1px aqua !important;
+    background-color: #15b8bf !important;
+    border: 1px #15b8bf !important;
+    display: inline-block !important;
 }

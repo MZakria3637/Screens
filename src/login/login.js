@@ -33,7 +33,7 @@ function Login() {
             <div className="login_form">
                 <div className="row1">
                     <h3 className="heading my-5 fw-bold">Log in</h3>
-                    <FormControl sx={{ my: 1, width: '80%' }} variant="standard">
+                    <FormControl sx={{ my: 1,mb:3, width: '80%' }} variant="standard">
                         <InputLabel htmlFor="standard-adornment-email">Email</InputLabel>
                         <Input
                             id="standard-adornment-email"
@@ -42,7 +42,7 @@ function Login() {
                             onChange={handleChange('email')}
                         />
                     </FormControl>
-                    <FormControl sx={{ my: 1, width: '80%' }} variant="standard">
+                    <FormControl sx={{ my: 1, mb: 3, width: '80%' }} variant="standard">
                         <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
                         <Input
                             id="standard-adornment-password"
@@ -63,7 +63,7 @@ function Login() {
                         />
                     </FormControl>
                     <span className="forgot_pass btn">Forgot Password</span>
-                    <button type="button" class="btn btn-primary login_btn fw-bold w-25 my-4">LOGIN</button>
+                    <button type="button" class="btn btn-primary d-inline login_btn fw-bold w-25 my-4">LOGIN</button>
                     
                 </div>
                 
