@@ -1,12 +1,14 @@
 //import Forgot from "./forgot_password/forgot_password";
 // import Login from "./login/login";
 
-import CreateAcount from "./create_account/createAcount";
+import ChangePassword from "./change_password/change_password";
+
+// import CreateAcount from "./create_account/createAcount";
 
 function App() {
   return (
     <div>
-      <CreateAcount />
+      <ChangePassword />
     </div>
   );
 }
