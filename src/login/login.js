@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import "./login.css"
 import { FormControl, IconButton, Input, InputAdornment, InputLabel, } from '@mui/material';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 function Login() {
     const [values, setValues] =useState({
         email: '',
@@ -62,7 +63,7 @@ function Login() {
                             }
                         />
                     </FormControl>
-                    <span className="forgot_pass btn">Forgot Password</span>
+                    <Link to="/forgot-password" className="forgot_pass btn">Forgot Password</Link>
                     <button type="button" class="btn btn-primary d-inline login_btn fw-bold w-25 my-4">LOGIN</button>
                     
                 </div>

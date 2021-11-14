@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import "./forgot.css"
 import { FormControl, Input, InputLabel, } from '@mui/material';
+import { Link } from 'react-router-dom';
 function Forgot() {
     const [values, setValues] = useState({
         email: '',
@@ -31,7 +32,7 @@ function Forgot() {
                             onChange={handleChange('email')}
                         />
                     </FormControl>
-                    <button type="button" class="btn btn-primary forgot_btn fw-bold w-25 my-4">Reset Password</button>
+                    <Link to="/change-password" class="btn btn-primary forgot_btn fw-bold w-25 my-4">Reset Password</Link>
 
                 </div>
 
