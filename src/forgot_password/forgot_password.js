@@ -16,10 +16,10 @@ function Forgot() {
 
 
     return (
-        <div className="Login">
+        <div className="Forgot">
             {console.log(values.showEmail)}
-            <div className="login_form">
-                <div className="row1">
+            <div className="forgot_form">
+                <div className="row2">
                     <h3 className="heading my-5 fw-bold">Forget Passsword</h3>
                     <h6 className="instruction">Confirm your email and we’ll send the instruction </h6>
                     <FormControl sx={{ my: 2, width: '80%' }} variant="standard">
@@ -31,7 +31,7 @@ function Forgot() {
                             onChange={handleChange('email')}
                         />
                     </FormControl>
-                    <button type="button" class="btn btn-primary login_btn fw-bold w-25 my-4">Reset Password</button>
+                    <button type="button" class="btn btn-primary forgot_btn fw-bold w-25 my-4">Reset Password</button>
 
                 </div>
 

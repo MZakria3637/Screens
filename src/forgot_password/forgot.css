@@ -1,19 +1,19 @@
-.Login{
-    background-color:#15b8bf;
+.Forgot{
+    background-color:aqua;
     width: 60%;
     height: 70vh;
     transform: translate(30%,15vh);
     overflow: hidden;
-    border: 10px solid #15b8bf;
+    border: 10px solid aqua;
 }
-.login_form{
+.forgot_form{
     width: 80%;
     background-color:white;
     float: right;
     height:100%;
     
 }
-.row1{
+.row2{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,8 +25,8 @@
     align-self: flex-start;
     padding-left: 10%;
 }
-.login_btn{
-    background-color: #15b8bf !important;
-    border: 1px #15b8bf !important;
+.forgot_btn{
+    background-color: aqua !important;
+    border: 1px aqua !important;
     display: inline-block !important;
 }
