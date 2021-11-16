@@ -17,7 +17,9 @@
 .background{
     background-color: #f5f5f5 !important;
     height: 100vh;
+    overflow: hiddens;
 }
 .boldText{
-    font-weight: bolder;
+    font-weight: 450 !important;
+    font-size:large !important;
 }
