@@ -16,7 +16,7 @@ function PersonInfo() {
     return (
         <div className="person-row">
             <h4 className="align-self-end mt-3 pInfo">Personal Information</h4>
-            <FormControl sx={{ my: 1, mb: 1, width: '50%' }} variant="standard">
+            <FormControl sx={{ my: 1, mb: 1, width: '40%' }} variant="standard">
                 <InputLabel htmlFor="standard-adornment-name">Name</InputLabel>
                 <Input
                     id="standard-adornment-name"
@@ -25,7 +25,7 @@ function PersonInfo() {
                     onChange={handleChange('name')}
                 />
             </FormControl>
-            <FormControl sx={{ my: 1, mb: 1, width: '50%' }} variant="standard">
+            <FormControl sx={{ my: 1, mb: 1, width: '40%' }} variant="standard">
                 <InputLabel htmlFor="standard-adornment-cellNumber">Cell Number</InputLabel>
                 <Input
                     id="standard-adornment-cellNumber"
@@ -34,7 +34,7 @@ function PersonInfo() {
                     onChange={handleChange('cellNumber')}
                 />
             </FormControl>
-            <FormControl sx={{ my: 1, mb: 1, width: '50%' }} variant="standard">
+            <FormControl sx={{ my: 1, mb: 1, width: '40%' }} variant="standard">
                 <InputLabel htmlFor="standard-adornment-email">E-mail</InputLabel>
                 <Input
                     id="standard-adornment-email"
@@ -43,7 +43,7 @@ function PersonInfo() {
                     onChange={handleChange('email')}
                 />
             </FormControl>
-            <FormControl sx={{ my: 1, mb: 1, width: '50%' }} variant="standard">
+            <FormControl sx={{ my: 1, mb: 1, width: '40%' }} variant="standard">
                 <InputLabel htmlFor="standard-adornment-shopAddress">Shop Address</InputLabel>
                 <Input
                     id="standard-adornment-shopAddress"
@@ -52,7 +52,7 @@ function PersonInfo() {
                     onChange={handleChange('shopAddress')}
                 />
             </FormControl>
-            <FormControl sx={{ my: 1, mb: 1, width: '50%' }} variant="standard">
+            <FormControl sx={{ my: 1, mb: 1, width: '40%' }} variant="standard">
                 <InputLabel htmlFor="standard-adornment-bankAcoount">Bank Acoount</InputLabel>
                 <Input
                     id="standard-adornment-bankAcoount"
