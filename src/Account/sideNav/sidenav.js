@@ -5,6 +5,7 @@ import Avatar from '@mui/material/Avatar';
 import "./sideNav.css";
 import PersonInfo from '../personInfo/personInfo';
 import { Route } from 'react-router';
+import { Link } from 'react-router-dom';
 function SideNav() {
     useEffect(() => {
         setpersonInf(true);
@@ -27,13 +28,15 @@ function SideNav() {
                 <span className=" align-self-center mb-5 boldText">Ali Awan</span>
                     <ListItem className="mx-3 mb-1 "
                         button
+                        to="/person"
                     onClick={() => {
                             setChangePassword(false);
                             setpersonInf(true);
                             setshipping(false)
                        
                     }}
-                >
+                    >
+                         
                         <ListItemText
                             disableTypography
                         primary={<Typography type="body2" style={{ fontWeight: PersonInf ? 'bold' : '' }}>Personal Information</Typography>} />
