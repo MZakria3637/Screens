@@ -3,24 +3,25 @@ import { Box } from '@mui/system'
 import React, { useState,useEffect } from 'react'
 import Avatar from '@mui/material/Avatar';
 import "./sideNav.css";
-
-
+import PersonInfo from '../personInfo/personInfo';
+import { Route } from 'react-router';
 function SideNav() {
     useEffect(() => {
-        setpersonInfo(true);
+        setpersonInf(true);
     }, [])
-    const [PersonInfo, setpersonInfo] = useState(false);
+    const [PersonInf, setpersonInf] = useState(false);
     const [ShippingArea, setshipping] = useState(false);
     const [ChangePassword, setChangePassword] = useState(false);
     return (
+        <div className="row overflow-hidden w-100">
         <Box
             sx={{ width: 250, overflow: 'hidden'}}
             role="presentation"
-            className="background"
+            className="background col-2"
             // onClick={toggleDrawer(anchor, false)}
             // onKeyDown={toggleDrawer(anchor, false)}
         >
-            {console.log(PersonInfo)}
+            {console.log(PersonInf)}
             <List className="row_side">
                 <Avatar alt="Remy Sharp" className="align-self-center mt-3" sx={{ width: 70, height: 70 }} />
                 <span className=" align-self-center mb-5 boldText">Ali Awan</span>
@@ -28,20 +29,20 @@ function SideNav() {
                         button
                     onClick={() => {
                             setChangePassword(false);
-                            setpersonInfo(true);
+                            setpersonInf(true);
                             setshipping(false)
                        
                     }}
                 >
                         <ListItemText
                             disableTypography
-                        primary={<Typography type="body2" style={{ fontWeight: PersonInfo ? 'bold' : '' }}>Personal Information</Typography>} />
+                        primary={<Typography type="body2" style={{ fontWeight: PersonInf ? 'bold' : '' }}>Personal Information</Typography>} />
                     </ListItem>
-                    <ListItem className="mx-3 mb-1 boldText"
+                    <ListItem className="mx-3 mb-1"
                         button
                         onClick={() => {
                                 setChangePassword(false);
-                                setpersonInfo(false);
+                                setpersonInf(false);
                                 setshipping(true)
                     }}
                 >
@@ -49,11 +50,11 @@ function SideNav() {
                             disableTypography
                         primary={<Typography type="body2" style={{ fontWeight: ShippingArea ? 'bold' : '' }}>Shipping Area</Typography>} />
                     </ListItem>
-                    <ListItem className="mx-3 mb-1 boldText"
+                    <ListItem className="mx-3 mb-1 "
                         button
-                        onClick={(text) => {
+                        onClick={() => {
                                 setChangePassword(true);
-                                setpersonInfo(false);
+                                setpersonInf(false);
                                 setshipping(false)
                     }}
                 >
@@ -68,6 +69,12 @@ function SideNav() {
             
             
         </Box>
+            <div className="col">
+                <Route path='/' component={PersonInfo} />
+            </div>
+            
+
+        </div>
     )
 }
 
