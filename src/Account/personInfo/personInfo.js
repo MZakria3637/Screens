@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "./person.css"
 import { FormControl,Input, InputLabel, } from '@mui/material';
-import { DropzoneArea } from 'material-ui-dropzone';
+// import { DropzoneArea } from 'material-ui-dropzone';
 // import PhotoCameraOutlinedIcon from '@mui/icons-material/PhotoCameraOutlined';
 import upload from "../../assets/upload.png"
 function PersonInfo() {

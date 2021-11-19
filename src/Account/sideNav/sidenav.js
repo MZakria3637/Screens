@@ -5,6 +5,7 @@ import Avatar from '@mui/material/Avatar';
 import "./sideNav.css";
 import PersonInfo from '../personInfo/personInfo';
 import { Route } from 'react-router';
+import Shippingarea from '../shippingarea/shippingArea';
 // import { Link } from 'react-router-dom';
 // profile =require("../../assets/profile.png");
 function SideNav() {
@@ -74,7 +75,9 @@ function SideNav() {
             
         </Box>
             <div className="col">
-                <Route path='/' component={PersonInfo} />
+                <Route path='/' component={Shippingarea} />
+                <Route path='/person' component={PersonInfo} />
+                
             </div>
             
 

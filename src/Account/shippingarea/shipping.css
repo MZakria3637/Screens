@@ -1,8 +1,27 @@
+.shipping{
+    margin-top: 5%;
+}
 .border_shipping{
     border: 1px solid rgb(51, 50, 50,0.2);
-    width: 40%;
+    width: 60%;
     background-color: #FFFFFF;
     margin-top:3%;
     padding-top: 2%;
     padding-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+}
+.bold_p{
+  font-weight:470;
+}
+.shipping-btn{
+    border-radius: 17px !important;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+    border: 1px #07aba1 !important;
+    background-color: #07aba1 !important;
+    color: white !important;
+    align-self: flex-end;
+    margin-right: 10%;
+    width: fit-content;
 }
