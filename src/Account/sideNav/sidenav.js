@@ -5,7 +5,8 @@ import Avatar from '@mui/material/Avatar';
 import "./sideNav.css";
 import PersonInfo from '../personInfo/personInfo';
 import { Route } from 'react-router';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+// profile =require("../../assets/profile.png");
 function SideNav() {
     useEffect(() => {
         setpersonInf(true);

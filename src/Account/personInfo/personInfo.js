@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import "./person.css"
-import { FormControl, Button, Input, InputAdornment, InputLabel, } from '@mui/material';
+import { FormControl,Input, InputLabel, } from '@mui/material';
+import { DropzoneArea } from 'material-ui-dropzone';
+// import PhotoCameraOutlinedIcon from '@mui/icons-material/PhotoCameraOutlined';
+import upload from "../../assets/upload.ico"
 function PersonInfo() {
     const [values, setValues] = useState({
         email: '',
@@ -16,7 +19,7 @@ function PersonInfo() {
     return (
         <div className="person-row">
             <h4 className="align-self-end mt-3 pInfo">Personal Information</h4>
-            <FormControl sx={{ my: 1, mb: 1, width: '40%' }} variant="standard">
+            <FormControl sx={{  width: '40%' }} variant="standard">
                 <InputLabel htmlFor="standard-adornment-name">Name</InputLabel>
                 <Input
                     id="standard-adornment-name"
@@ -25,7 +28,7 @@ function PersonInfo() {
                     onChange={handleChange('name')}
                 />
             </FormControl>
-            <FormControl sx={{ my: 1, mb: 1, width: '40%' }} variant="standard">
+            <FormControl sx={{  width: '40%' }} variant="standard">
                 <InputLabel htmlFor="standard-adornment-cellNumber">Cell Number</InputLabel>
                 <Input
                     id="standard-adornment-cellNumber"
@@ -34,7 +37,7 @@ function PersonInfo() {
                     onChange={handleChange('cellNumber')}
                 />
             </FormControl>
-            <FormControl sx={{ my: 1, mb: 1, width: '40%' }} variant="standard">
+            <FormControl sx={{  width: '40%' }} variant="standard">
                 <InputLabel htmlFor="standard-adornment-email">E-mail</InputLabel>
                 <Input
                     id="standard-adornment-email"
@@ -43,7 +46,7 @@ function PersonInfo() {
                     onChange={handleChange('email')}
                 />
             </FormControl>
-            <FormControl sx={{ my: 1, mb: 1, width: '40%' }} variant="standard">
+            <FormControl sx={{  width: '40%' }} variant="standard">
                 <InputLabel htmlFor="standard-adornment-shopAddress">Shop Address</InputLabel>
                 <Input
                     id="standard-adornment-shopAddress"
@@ -52,7 +55,7 @@ function PersonInfo() {
                     onChange={handleChange('shopAddress')}
                 />
             </FormControl>
-            <FormControl sx={{ my: 1, mb: 1, width: '40%' }} variant="standard">
+            <FormControl sx={{  width: '40%' }} variant="standard">
                 <InputLabel htmlFor="standard-adornment-bankAcoount">Bank Acoount</InputLabel>
                 <Input
                     id="standard-adornment-bankAcoount"
@@ -61,16 +64,10 @@ function PersonInfo() {
                     onChange={handleChange('bankAcoount')}
                 />
             </FormControl>
-            <Button
-                variant="contained"
-                component="label"
-            >
-                Upload File
-                <input
-                    type="file"
-                    hidden
-                />
-            </Button>
+            <label className="float-start">Upload Profile Image </label>
+            <div className="w-75  d-flex align-center justify-content-center">
+             <img src={upload} className=""></img>
+             </div>
             <button type="button" class="person-btn btn  fw-bold my-4 ">Save</button>
         </div>
     )

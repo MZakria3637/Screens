@@ -4,7 +4,7 @@ import Forgot from "./forgot_password/forgot_password";
 import ChangePassword from "./change_password/change_password";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import SideNav from "./Account/sideNav/sidenav";
-import PersonInfo from "./Account/personInfo/personInfo";
+// import PersonInfo from "./Account/personInfo/personInfo";
 import React from "react";
 // import CreateAcount from "./create_account/createAcount";
 
