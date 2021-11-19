@@ -26,3 +26,15 @@
     height: 5%;
     overflow: hidden;
 }
+.label{
+    margin-left: -27%;
+}
+.border_image{
+    border: 1px solid rgb(51, 50, 50,0.2);
+    width: 40%;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    margin-top: 10px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}

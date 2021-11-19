@@ -3,7 +3,7 @@ import "./person.css"
 import { FormControl,Input, InputLabel, } from '@mui/material';
 import { DropzoneArea } from 'material-ui-dropzone';
 // import PhotoCameraOutlinedIcon from '@mui/icons-material/PhotoCameraOutlined';
-import upload from "../../assets/upload.ico"
+import upload from "../../assets/upload.png"
 function PersonInfo() {
     const [values, setValues] = useState({
         email: '',
@@ -64,8 +64,8 @@ function PersonInfo() {
                     onChange={handleChange('bankAcoount')}
                 />
             </FormControl>
-            <label className="float-start">Upload Profile Image </label>
-            <div className="w-75  d-flex align-center justify-content-center">
+            <label className="label">Upload Profile Image </label>
+            <div className=" border_image d-flex align-center justify-content-center">
              <img src={upload} className=""></img>
              </div>
             <button type="button" class="person-btn btn  fw-bold my-4 ">Save</button>

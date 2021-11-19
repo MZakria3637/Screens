@@ -1,0 +1,8 @@
+.border_shipping{
+    border: 1px solid rgb(51, 50, 50,0.2);
+    width: 40%;
+    background-color: #FFFFFF;
+    margin-top:3%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
