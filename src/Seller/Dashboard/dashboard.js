@@ -7,6 +7,7 @@ import AutoGraphIcon from '@mui/icons-material/AutoGraph';
 import StoreMallDirectoryIcon from '@mui/icons-material/StoreMallDirectory';
 import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 import Rating from '@mui/material/Rating';
+import MainDashboard from './mainDashboard';
 function Dashboard() {
     const history = useHistory();
     const [value, setValue] = React.useState(2);
@@ -40,15 +41,17 @@ function Dashboard() {
                 <List className="row_side">
                     <Avatar alt="Remy Sharp" className="align-self-center mt-3" sx={{ width: 70, height: 70 }} />
                     <span className=" align-self-center  boldText">Ali Awan</span>
+                    <div className="align-self-center mb-5">
                     <Rating
                         sx={{ color:'#07ABA1'}}
-                        className="align-self-center mb-5"
+                        
                         name="simple-controlled"
                         value={value}
                         onChange={(event, newValue) => {
                             setValue(newValue);
                         }}
-                    />
+                    ></Rating>
+                    </div>
                     <ListItem className="mx-3 mb-1 "
                         button
                         to="/person"
@@ -104,6 +107,7 @@ function Dashboard() {
 
             </Box>
             <div className="col">
+                <MainDashboard/>
                 {/* <Route path='/account/shipping' component={Quote} />
                 <Route path='/account/Ordero' component={Ordero} />
                 <Route path='/account/changepass' component={Sales} /> */}

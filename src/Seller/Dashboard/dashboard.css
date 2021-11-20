@@ -1,0 +1,11 @@
+.dashboard{
+    border: 1px solid rgb(49, 49, 49,0.5);
+    width: 70%;
+    border-left: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius:10px ;
+}
+.amazon{
+    float: right;
+    
+}
