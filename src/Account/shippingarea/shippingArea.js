@@ -7,7 +7,7 @@ function Shippingarea() {
             <h3 className="opacity">Add Shipping Areas </h3>
             <p className="bold_p opacity"> These are the areas where you will get Quote Requests. </p>
             <div className="border_shipping">
-                <input type="password" placeholder="Add Location" className=" p-2 Shipping-input " id="currentPassword" />
+                <input type="text" placeholder="Add Location" className=" p-2 Shipping-input " id="currentPassword" />
                 <FormControlLabel className="mt-3 align-self-start checkShipping"
                     control={
                         <Checkbox

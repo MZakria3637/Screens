@@ -18,7 +18,7 @@ function ChangePassword() {
                         <label for="confirmPassword" className="form-label fw-bold fs-6">Confirm Password</label>
                         <input type="password" className=" p-2 input" id="confirmPassword" />
                     </div>
-                    <button type="button" class="change_pass btn btn-primary change_btn fw-bold my-4">Save</button>
+                    <button type="button" class="btn btn-primary change_btn fw-bold my-4">Save</button>
 
                 </div>
 

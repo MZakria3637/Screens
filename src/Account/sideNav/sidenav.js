@@ -6,15 +6,32 @@ import "./sideNav.css";
 import PersonInfo from '../personInfo/personInfo';
 import { Route } from 'react-router';
 import Shippingarea from '../shippingarea/shippingArea';
-// import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+import ChangePassword from "./../../change_password/change_password";
 // profile =require("../../assets/profile.png");
 function SideNav() {
+    const history = useHistory();
+   
+    const [PersonInf, setpersonInf] = useState(false);
+    const [ShippingArea, setshipping] = useState(false);
+    const [Changepassword, setChangepassword] = useState(false);
     useEffect(() => {
         setpersonInf(true);
     }, [])
-    const [PersonInf, setpersonInf] = useState(false);
-    const [ShippingArea, setshipping] = useState(false);
-    const [ChangePassword, setChangePassword] = useState(false);
+    useEffect(() => {
+        if (PersonInf)
+        {
+            history.push("/account/personinfo")
+        }
+        else if (ShippingArea)
+        {
+            history.push("/account/shipping")
+        }
+        else if (Changepassword)
+        {
+            history.push("/account/changepass")
+        }
+    }, [PersonInf, ShippingArea, Changepassword,history])
     return (
         <div className="row overflow-hidden w-100">
         <Box
@@ -32,7 +49,7 @@ function SideNav() {
                         button
                         to="/person"
                     onClick={() => {
-                            setChangePassword(false);
+                            setChangepassword(false);
                             setpersonInf(true);
                             setshipping(false)
                        
@@ -46,7 +63,7 @@ function SideNav() {
                     <ListItem className="mx-3 mb-1"
                         button
                         onClick={() => {
-                                setChangePassword(false);
+                                setChangepassword(false);
                                 setpersonInf(false);
                                 setshipping(true)
                     }}
@@ -58,14 +75,14 @@ function SideNav() {
                     <ListItem className="mx-3 mb-1 "
                         button
                         onClick={() => {
-                                setChangePassword(true);
+                                setChangepassword(true);
                                 setpersonInf(false);
                                 setshipping(false)
                     }}
                 >
                         <ListItemText
                         disableTypography
-                        primary={<Typography type="body2" style={{ fontWeight: ChangePassword ? 'bold' : '' }}>Change Password</Typography>} />
+                        primary={<Typography type="body2" style={{ fontWeight: Changepassword ? 'bold' : '' }}>Change Password</Typography>} />
                     </ListItem>
                    
                 
@@ -75,9 +92,9 @@ function SideNav() {
             
         </Box>
             <div className="col">
-                <Route path='/' component={Shippingarea} />
-                <Route path='/person' component={PersonInfo} />
-                
+                <Route path='/account/shipping' component={Shippingarea} />
+                <Route path='/account/personinfo' component={PersonInfo} />
+                <Route path='/account/changepass' component={ChangePassword}/>
             </div>
             
 
