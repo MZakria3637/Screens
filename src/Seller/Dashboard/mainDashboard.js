@@ -5,7 +5,7 @@ import Charts from "./charts";
 function MainDashboard() {
     return (
         <div>
-            <h4 className="fw-bold pt-5 px-3 pb-5">Seller Dashboard</h4>
+            <h4 className="fw-bold pt-2 px-3 pb-5">Seller Dashboard</h4>
             <h4 className="fw-bold px-3 ">Ali Awan</h4>
             <div className="dashboard">
             <p className="px-3 fw-bold opacity">Hey Welcome on Your dashboard. See your<br/>

@@ -35,3 +35,61 @@ flex-direction: row;
 .profit{
  background-color: #164800 !important;
 }
+.orders{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    background-color: #07ABA1 !important;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+}
+.suborders{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height:55px;
+    padding: 2px;
+     width: 90%;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+.subCol{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 5px;
+    font-weight: 500;
+    font-size:small;
+   
+}
+.shipment{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+    align-self: flex-end;
+    margin-right: -30px;
+
+}
+.ship1{
+    margin-top: -12px;
+    margin-bottom: 0px;
+     font-size: x-small;
+}
+.ship2{
+     margin-top: -12px;
+    margin-bottom: 0px;
+    font-size: x-small;
+}
+.ship3{
+    margin-bottom: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px white;
+    color:red;
+     font-size: x-small;
+}
