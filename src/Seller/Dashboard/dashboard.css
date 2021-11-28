@@ -1,11 +1,37 @@
 .dashboard{
     border: 1px solid rgb(49, 49, 49,0.5);
-    width: 70%;
+    width: 90%;
     border-left: none;
-    border-top-right-radius: 10px;
+    border-top-right-radius: 10px;  
     border-bottom-right-radius:10px ;
+    float: left;
+    height: fit-content;
+}
+
+.dashIcon{
+width:90%;
+display: flex;
+flex-direction: row;
+
 }
 .amazon{
-    float: right;
-    
+    margin-top: -20%;
+}
+.price{
+    width: 250px;
+    height: 70px;
+    background-color: #07ABA1;
+    margin-right: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top:10px ;
+    color: antiquewhite;
+}
+.sale{
+    background-color: #0082BC !important;
+}
+.profit{
+ background-color: #164800 !important;
 }

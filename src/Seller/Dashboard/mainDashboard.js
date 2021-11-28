@@ -9,7 +9,23 @@ function MainDashboard() {
             <div className="dashboard">
             <p className="px-3 fw-bold opacity">Hey Welcome on Your dashboard. See your<br/>
                     Montly Sale and profile lose on your Screen.</p>
-                <img className="d-flex align-self-end" src={DashboardIcon}/>
+                <div className="dashIcon">
+                    <div className="price">
+                        <h6 className="fw-bold">Balance</h6>
+                        <h6 className="fw-bold">100$</h6>
+                    </div>
+                        <div className="price sale">
+                        <h6 className="fw-bold">Monthly Sale</h6>
+                        <h6 className="fw-bold">100$</h6>
+                        </div>
+                            <div className="price profit">
+                        <h6 className="fw-bold">Profit</h6>
+                        <h6 className="fw-bold">1000$</h6>
+                            </div>
+                    <div className="amazon">
+                    <img className="" src={DashboardIcon} />
+                    </div>
+                </div>
 </div>
         </div>
     )
