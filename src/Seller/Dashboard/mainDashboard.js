@@ -1,6 +1,7 @@
 import React from 'react';
 import "./dashboard.css";
 import DashboardIcon from "./../../assets/amzon.png";
+import Charts from "./charts";
 function MainDashboard() {
     return (
         <div>
@@ -23,10 +24,12 @@ function MainDashboard() {
                         <h6 className="fw-bold">1000$</h6>
                             </div>
                     <div className="amazon">
-                    <img className="" src={DashboardIcon} />
+                    <img alt="Null" className="" src={DashboardIcon} />
                     </div>
                 </div>
-</div>
+                <Charts />
+            </div>
+            
         </div>
     )
 }

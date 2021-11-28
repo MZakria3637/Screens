@@ -1,4 +1,4 @@
-import { List, ListItem, ListItemIcon, ListItemText, SvgIcon, Typography } from '@mui/material'
+import { List, ListItem, ListItemIcon, ListItemText, Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import React, { useState, useEffect } from 'react'
 import Avatar from '@mui/material/Avatar';
