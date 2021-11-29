@@ -9,6 +9,7 @@ import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 import Rating from '@mui/material/Rating';
 import MainDashboard from './mainDashboard';
 import Orders from '../Orders/Orders';
+import Quotes from '../Quote Requests/quotes';
 function Dashboard() {
     const history = useHistory();
     const [value, setValue] = React.useState(2);
@@ -109,7 +110,8 @@ function Dashboard() {
             </Box>
             <div className="col">
                 {/* <MainDashboard/> */}
-                <Orders/>
+                {/* <Orders/> */}
+                <Quotes/>
                 {/* <Route path='/account/shipping' component={Quote} />
                 <Route path='/account/Ordero' component={Ordero} />
                 <Route path='/account/changepass' component={Sales} /> */}
