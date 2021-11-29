@@ -1,0 +1,11 @@
+.border_bold{
+font-weight: 900;
+border-bottom:2px solid black ;
+}
+.cursor{
+    cursor: pointer;
+}
+.back_orders{
+    background-color: #E4E4E4;
+
+}

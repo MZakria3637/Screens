@@ -8,6 +8,7 @@ import StoreMallDirectoryIcon from '@mui/icons-material/StoreMallDirectory';
 import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 import Rating from '@mui/material/Rating';
 import MainDashboard from './mainDashboard';
+import Orders from '../Orders/Orders';
 function Dashboard() {
     const history = useHistory();
     const [value, setValue] = React.useState(2);
@@ -107,7 +108,8 @@ function Dashboard() {
 
             </Box>
             <div className="col">
-                <MainDashboard/>
+                {/* <MainDashboard/> */}
+                <Orders/>
                 {/* <Route path='/account/shipping' component={Quote} />
                 <Route path='/account/Ordero' component={Ordero} />
                 <Route path='/account/changepass' component={Sales} /> */}
