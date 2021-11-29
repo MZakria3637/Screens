@@ -9,3 +9,10 @@ border-bottom:2px solid black ;
     background-color: #E4E4E4;
 
 }
+.w_opacity{
+    width: 98%;
+    border-bottom: 1px solid rgb(44, 43, 43,0.3);
+}
+.main_border{
+    border: 1px solid rgb(44, 43, 43,0.5);
+}

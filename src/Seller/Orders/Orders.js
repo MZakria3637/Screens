@@ -16,7 +16,7 @@ function Orders() {
         <div className="d-flex mx-4 flex-column w-75">
             <h5 className="mt-3 align-self-center ">Orders</h5>
             <div className="d-flex mt-2 mx-4 flex-row  w-75">
-                <h6 className="me-5 cursor  pe-auto" className={States.All ?"border_bold me-5 cursor":"me-5 cursor"}  onClick={() => {
+                <h6 className={States.All ?"border_bold me-5 cursor":"me-5 cursor"}  onClick={() => {
                     setStates({
                         All: true,
                     })
@@ -47,7 +47,7 @@ function Orders() {
 
                 }}>Completed</h6>
             </div>
-            <div className="mt-3 mx-2 w-100 border border-secondary h-100">
+            <div className="d-flex flex-column align-items-center mt-3 mx-2 w-100 main_border h-100">
                 <div className="w-100 d-flex back_orders flex-row border-bottom border-secondary p-2">
                     <h6 className="me-5 mx-5">Order</h6>
                     <h6 className="me-5 mx-5">Items</h6>
@@ -55,25 +55,25 @@ function Orders() {
                     <h6 className="me-5 mx-5">Price</h6>
                     <h6 className="me-5 mx-5">Status</h6>
                 </div>
-                <div className="w-100 d-flex flex-row-reverse  border-bottom border-secondary p-1">
+                <div className="w_opacity d-flex flex-row-reverse  p-1">
                     <CompareArrowsIcon className="" sx={{ fontSize:35}}/>
                 </div>
-                <div className="w-100 d-flex flex-row-reverse  border-bottom border-secondary p-4">
+                <div className="w_opacity d-flex flex-row-reverse  p-4">
                 </div>
-                <div className="w-100 d-flex flex-row-reverse  border-bottom border-secondary p-4">
+                <div className="w_opacity d-flex flex-row-reverse  p-4">
                 </div>
-                <div className="w-100 d-flex flex-row-reverse  border-bottom border-secondary p-4">
+                <div className="w_opacity d-flex flex-row-reverse  p-4">
                 </div>
-                <div className="w-100 d-flex flex-row-reverse  border-bottom border-secondary p-4">
+                <div className="w_opacity d-flex flex-row-reverse  p-4">
                 </div>
-                <div className="w-100 d-flex flex-row-reverse  border-bottom border-secondary p-4">
+                <div className="w_opacity d-flex flex-row-reverse  p-4">
                 </div>
-                <div className="w-100 d-flex flex-row-reverse  border-bottom border-secondary p-4">
+                <div className="w_opacity d-flex flex-row-reverse  p-4">
                 </div>
-                <div className="w-100 d-flex flex-row-reverse    p-4">
+                <div className=" d-flex flex-row-reverse    p-4">
                 </div>
             </div>
-            <h5 className=" mt-3 cursor align-self-end"><span className="border_bold">Next Page</span></h5>
+            <h6 className=" mt-3 cursor align-self-end"><span className="border_bold">NEXT PAGE</span></h6>
         </div>
     )
 }
