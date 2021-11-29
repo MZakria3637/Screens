@@ -2,34 +2,44 @@ import { List, ListItem, ListItemIcon, ListItemText, Typography } from '@mui/mat
 import { Box } from '@mui/system'
 import React, { useState, useEffect } from 'react'
 import Avatar from '@mui/material/Avatar';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Route } from 'react-router-dom';
 import AutoGraphIcon from '@mui/icons-material/AutoGraph';
 import StoreMallDirectoryIcon from '@mui/icons-material/StoreMallDirectory';
 import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 import Rating from '@mui/material/Rating';
 import MainDashboard from './mainDashboard';
 import Orders from '../Orders/Orders';
-import Quotes from '../Quote Requests/quotes';
+import Quotes from '../Quote Requests/quotes'
 function Dashboard() {
     const history = useHistory();
     const [value, setValue] = React.useState(2);
     const [Order, setOrder] = useState(false);
     const [Quote, setQuote] = useState(false);
     const [Sales, setSales] = useState(false);
+    const [main, setmain] = useState(false);
     useEffect(() => {
         if (Order)
         {
-            // history.push("/account/Ordero")
+            history.push("/seller/order");
         }
         else if (Quote)
         {
-            // history.push("/account/shipping")
+            history.push("/seller/request-quotes");
         }
         else if (Sales)
         {
-            //      history.push("/account/changepass")
+            history.push("/seller");
         }
-    }, [Order, Quote, Sales, history])
+        else if (main)
+        {
+            history.push("/seller");
+        }
+    }, [Order, Quote, Sales, main, history])
+    console.log(main);
+    console.log(Order);
+    console.log(Quote);
+    console.log(Sales);
+    console.log("----------------end--------");
     return (
         <div className="row overflow-hidden w-100">
             <Box
@@ -60,7 +70,8 @@ function Dashboard() {
                         onClick={() => {
                             setSales(false);
                             setOrder(true);
-                            setQuote(false)
+                            setQuote(false);
+                            setmain(false);
 
                         }}
                     >
@@ -76,7 +87,8 @@ function Dashboard() {
                         onClick={() => {
                             setSales(false);
                             setOrder(false);
-                            setQuote(true)
+                            setQuote(true);
+                            setmain(false);
                         }}
                     >
                         <ListItemIcon>
@@ -91,7 +103,8 @@ function Dashboard() {
                         onClick={() => {
                             setSales(true);
                             setOrder(false);
-                            setQuote(false)
+                            setQuote(false);
+                            setmain(false);
                         }}
                     >
                         <ListItemIcon>
@@ -103,18 +116,22 @@ function Dashboard() {
                     </ListItem>
 
 
-                    <button type="button" class="side_btn btn  fw-bold my-4 ">Return Home</button>
+                    <button type="button" class="side_btn btn  fw-bold my-4 "
+                        onClick={() => {
+                            setSales(false);
+                            setOrder(false);
+                            setQuote(false);
+                            setmain(true);
+                        }}>Return Home</button>
                 </List>
 
 
             </Box>
             <div className="col">
-                {/* <MainDashboard/> */}
-                {/* <Orders/> */}
-                <Quotes/>
-                {/* <Route path='/account/shipping' component={Quote} />
-                <Route path='/account/Ordero' component={Ordero} />
-                <Route path='/account/changepass' component={Sales} /> */}
+                {!Order && !Quote && <Route path='/seller' component={MainDashboard} />}
+                <Route path='/seller/request-quotes' component={Quotes} />
+                <Route path='/seller/order' component={Orders} />
+                
             </div>
 
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import './../Orders/orders.css'
 import DeleteIcon from '@mui/icons-material/Delete';
 import VisibilityIcon from '@mui/icons-material/Visibility';
@@ -10,7 +10,6 @@ function Quotes() {
                 <option value="0">10</option>
                 <option value="1">11</option>
                 <option value="2">12</option>
-               
             </select>
             </span>
             <div className="d-flex flex-column align-items-center mt-3 mx-2 w-100 main_border h-100">

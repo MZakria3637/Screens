@@ -11,30 +11,38 @@ import Dashboard from "./Seller/Dashboard/dashboard";
 
 function App() {
   return (
-    <Dashboard/>
-    // <BrowserRouter>
-    //   <Switch>
-    //     <Route exact path='/account'>
-    //       <SideNav />
-    //       {/* <PersonInfo/> */}
-    //     </Route>
-    //     <Route exact path='/account/shipping'>
-    //       <SideNav />
-    //     </Route>
-    //     <Route exact path='/account/changepass'>
-    //       <SideNav />
-    //     </Route>
-    //     <Route exact path='/account/personinfo'>
-    //       <SideNav />
-    //     </Route>
-    //     <Route exact path="/">
-    //       <Redirect to="/account" />
-    //     </Route>
-    //     <Route exact path='/login' ><Login /></Route>
-    //     <Route exact path='/forgot-password' ><Forgot /></Route>
-    //     <Route exact path='/change-password'><ChangePassword /></Route>
-    //   </Switch>
-    // </BrowserRouter>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/">
+          <Redirect to="/seller" />
+        </Route>
+        <Route exact path='/account'>
+          <SideNav />
+        </Route>
+        <Route exact path='/account/shipping'>
+          <SideNav />
+        </Route>
+        <Route exact path='/account/changepass'>
+          <SideNav />
+        </Route>
+        <Route exact path='/account/personinfo'>
+          <SideNav />
+        </Route>
+        <Route exact path='/seller'>
+          <Dashboard />
+        </Route>
+        <Route exact path='/seller/order'>
+          <Dashboard />
+        </Route>
+        <Route exact path='/seller/request-quotes'>
+          <Dashboard />
+        </Route>
+       
+        <Route exact path='/login' ><Login /></Route>
+        <Route exact path='/forgot-password' ><Forgot /></Route>
+        <Route exact path='/change-password'><ChangePassword /></Route>
+      </Switch>
+    </BrowserRouter>
   );
 }
 
