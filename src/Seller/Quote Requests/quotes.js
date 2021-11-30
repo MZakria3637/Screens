@@ -1,8 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './../Orders/orders.css'
 import DeleteIcon from '@mui/icons-material/Delete';
 import VisibilityIcon from '@mui/icons-material/Visibility';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
 function Quotes() {
+    const [open, setOpen] = useState(false);
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
     return (
         <div className="d-flex mx-4 flex-column w-75">
             <h5 className="mt-3 align-self-center ">Quote Requests</h5>
@@ -39,7 +55,32 @@ function Quotes() {
                 <div className=" d-flex flex-row-reverse    p-4">
                 </div>
             </div>
-            <h6 className=" mt-3 cursor align-self-end"><span className="border_bold">NEXT PAGE</span></h6>
+            <h6 className=" mt-3 cursor align-self-end" ><span className="border_bold">NEXT PAGE</span></h6>
+            <Button variant="outlined" onClick={handleClickOpen}>
+                Open form dialog
+            </Button>
+            <Dialog open={open} onClose={handleClose}>
+                <DialogTitle sx={{ color:"#07ABA1" ,alignSelf:"center",fontWeight:700,fontSize:24}}>Request Details</DialogTitle>
+                <DialogContent>
+                    <DialogContentText>
+                        To subscribe to this website, please enter your email address here. We
+                        will send updates occasionally.
+                    </DialogContentText>
+                    <TextField
+                        autoFocus
+                        margin="dense"
+                        id="name"
+                        label="Email Address"
+                        type="email"
+                        fullWidth
+                        variant="standard"
+                    />
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={handleClose}>Cancel</Button>
+                    <Button onClick={handleClose}>Subscribe</Button>
+                </DialogActions>
+            </Dialog>
         </div>
     )
 }

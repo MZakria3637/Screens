@@ -1,13 +1,10 @@
 import Forgot from "./forgot_password/forgot_password";
  import Login from "./login/login";
-// import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ChangePassword from "./change_password/change_password";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import SideNav from "./Account/sideNav/sidenav";
-// import PersonInfo from "./Account/personInfo/personInfo";
 import React from "react";
 import Dashboard from "./Seller/Dashboard/dashboard";
-// import CreateAcount from "./create_account/createAcount";
 
 function App() {
   return (
