@@ -9,6 +9,7 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import './quotes.css'
 function Quotes() {
     const [open, setOpen] = useState(false);
 
@@ -38,7 +39,7 @@ function Quotes() {
                 </div>
                 <div className="w_opacity d-flex flex-row-reverse  p-1">
                     <DeleteIcon className="me-5" sx={{ fontSize: 35 }} />
-                    <VisibilityIcon className="me-3" sx={{ fontSize: 35 }} />
+                    <VisibilityIcon className="me-3 fw-bold " onClick={handleClickOpen} sx={{ fontSize: 35 }} />
                 </div>
                 <div className="w_opacity d-flex flex-row-reverse  p-4">
                 </div>
@@ -56,29 +57,35 @@ function Quotes() {
                 </div>
             </div>
             <h6 className=" mt-3 cursor align-self-end" ><span className="border_bold">NEXT PAGE</span></h6>
-            <Button variant="outlined" onClick={handleClickOpen}>
+            {/* <Button variant="outlined" onClick={handleClickOpen}>
                 Open form dialog
-            </Button>
-            <Dialog open={open} onClose={handleClose}>
-                <DialogTitle sx={{ color:"#07ABA1" ,alignSelf:"center",fontWeight:700,fontSize:24}}>Request Details</DialogTitle>
-                <DialogContent>
-                    <DialogContentText>
-                        To subscribe to this website, please enter your email address here. We
-                        will send updates occasionally.
-                    </DialogContentText>
-                    <TextField
-                        autoFocus
-                        margin="dense"
-                        id="name"
-                        label="Email Address"
-                        type="email"
-                        fullWidth
-                        variant="standard"
-                    />
+            </Button> */}
+            <Dialog open={open} onClose={handleClose} sx={{padding:10}}>
+                <DialogTitle sx={{ color:"#07ABA1" ,alignSelf:"center",fontWeight:700,fontSize:25,paddingLeft:25,paddingRight:25}}>Request Details</DialogTitle>
+                <DialogContent sx={{ display: "flex", alignItems: "center", flexDirection: "column",}}>
+                        <div className="d-flex flex-row">
+                            <h5 className="me-5 fw-bold ">Total Items</h5>
+                        <h5 className="opacityOf">15</h5>
+                    </div>
+                    <div className="d-flex flex-row">
+                        <h5 className="me-5 fw-bold ">Total Price</h5>
+                        <h5 className="opacityOf">15</h5>
+                    </div>
+                    <div className="d-flex flex-row">
+                        <h5 className="me-5 fw-bold ">Shipping Area</h5>
+                        <h5 className="opacityOf">15</h5>
+                    </div>
+                    <div className="d-flex flex-row">
+                        <h5 className="me-5 fw-bold ">Delivery Area</h5>
+                        <h5 className="opacityOf">15</h5>
+                    </div>
+                    <div className="d-flex flex-row">
+                        <h5 className="me-5 fw-bold ">Entery Delivery Charges</h5>
+                        <input type="text" className=""></input>
+                    </div>
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={handleClose}>Cancel</Button>
-                    <Button onClick={handleClose}>Subscribe</Button>
+                    <Button onClick={handleClose} className="side_btn px-3 pe-3 mb-4 me-3">Submit</Button>
                 </DialogActions>
             </Dialog>
         </div>
